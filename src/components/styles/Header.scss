@@ -1,0 +1,37 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container
+{
+    align-items: center;
+    background-color: black;
+    color: #119822;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    h1
+    {
+        animation: glitch 1.5s linear infinite;
+        font-size: 1.5rem;
+    }
+}
+  
+@keyframes glitch
+{
+    2%,64%{
+    transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+    transform: translate(0,0) skew(5deg); 
+    }
+}
+  
