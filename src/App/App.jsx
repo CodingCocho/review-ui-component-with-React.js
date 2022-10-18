@@ -1,6 +1,6 @@
 import {motion, AnimatePresence} from 'framer-motion';
 import {BrowserRouter, Link, Routes, Route} from 'react-router-dom';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import {About} from '../pages/About';
 import {FeedbackForm} from '../components/FeedbackForm';
 import {FeedbackItem} from '../components/FeedbackItem';
