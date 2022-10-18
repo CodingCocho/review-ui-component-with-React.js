@@ -14,6 +14,10 @@
   padding: 20px 20px;
   width: 275px;
 }
+.form-container .form-instructions {
+  text-align: center;
+  width: 100%;
+}
 .form-container .ratings-container {
   display: flex;
   flex-wrap: wrap;
@@ -52,4 +56,9 @@
 }
 .form-container .input-container button:hover {
   background-color: #c0a6a9;
+}
+.form-container .disabled-message {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
 }/*# sourceMappingURL=FeedbackForm.css.map */

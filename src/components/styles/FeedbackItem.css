@@ -27,13 +27,13 @@
   border-radius: 50%;
   color: #FFEAEC;
   display: flex;
-  height: 30px;
+  height: 40px;
   justify-content: center;
-  left: -30px;
+  left: -35px;
   padding: 10px;
   position: relative;
-  top: -15px;
-  width: 30px;
+  top: -17.5px;
+  width: 40px;
 }
 .feedback-container .rating-text {
   font-size: 0.75rem;

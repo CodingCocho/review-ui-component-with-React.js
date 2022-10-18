@@ -15,31 +15,5 @@
   width: 100vw;
 }
 .container h1 {
-  -webkit-animation: glitch 1.5s linear infinite;
-          animation: glitch 1.5s linear infinite;
   font-size: 1.5rem;
-}
-
-@-webkit-keyframes glitch {
-  2%, 64% {
-    transform: translate(5px, 0) skew(45deg);
-  }
-  4%, 60% {
-    transform: translate(-5px, 0) skew(5deg);
-  }
-  62% {
-    transform: translate(0, 0) skew(5deg);
-  }
-}
-
-@keyframes glitch {
-  2%, 64% {
-    transform: translate(5px, 0) skew(45deg);
-  }
-  4%, 60% {
-    transform: translate(-5px, 0) skew(5deg);
-  }
-  62% {
-    transform: translate(0, 0) skew(5deg);
-  }
 }/*# sourceMappingURL=Header.css.map */

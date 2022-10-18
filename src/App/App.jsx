@@ -10,11 +10,11 @@ import { FeedbackStats } from '../components/FeedbackStats';
 function App() {
   
   // Import backend data 
-  const backendData = reviewData.feedback
+  const backendData = reviewData.feedback;
   
   // Create a state for the data since it will be immutable
   const [data, setData] = useState(backendData);
-
+  
   // Component functions
 
   /* 
@@ -29,6 +29,16 @@ function App() {
           setData(data.filter(review => review.id !== id));
       }
   }
+
+  /* 
+    Add a new FeedbackItem component to the list
+    @param newFeedbackComponent feedback object to add to existing data
+    @return none 
+  */
+  const addFeedbackItemComponent = (newFeedbackComponent) =>
+  {
+      setData([newFeedbackComponent, ...data])
+  }
   
   // Return our main app structure
   return (
@@ -39,7 +49,10 @@ function App() {
       text={"Feedback UI"}
       />
 
-      <FeedbackForm />
+      {/* FeedbackForm component to handle new feedback entries */}
+      <FeedbackForm 
+      addHandler={addFeedbackItemComponent}
+      />
 
       {/* FeedbackStats component to display our data useState */}
       <FeedbackStats 
