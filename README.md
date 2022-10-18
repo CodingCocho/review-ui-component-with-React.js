@@ -6,7 +6,7 @@ About page where the user can read about how the application works.
 # Learning Outcomes
 
 I learned how to use framer-motion which allows for animations to be used on components. Furthermore,
-I got a better understanding of position relative vs absolute and how it can make my future project better.
+I got a better understanding of position relative vs absolute and how it can make my future project better. Most importantly, I started following commenting guidelines to allow transparency and readability in my code.
 
 # Challenges 
 
