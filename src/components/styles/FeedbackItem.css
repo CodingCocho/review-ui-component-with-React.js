@@ -1,1 +1,42 @@
-/*# sourceMappingURL=FeedbackItem.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.feedback-container {
+  background-color: #FFEAEC;
+  border-radius: 10px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 10px 20px;
+  position: relative;
+  width: 275px;
+}
+.feedback-container .close-icon {
+  cursor: pointer;
+  position: relative;
+  right: -225px;
+  top: -30px;
+}
+.feedback-container .rating-container {
+  align-items: center;
+  background-color: #119822;
+  border-radius: 50%;
+  color: #FFEAEC;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  left: -30px;
+  padding: 10px;
+  position: relative;
+  top: -15px;
+  width: 30px;
+}
+.feedback-container .rating-text {
+  font-size: 0.75rem;
+  position: relative;
+  top: -25px;
+}/*# sourceMappingURL=FeedbackItem.css.map */

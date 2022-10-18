@@ -1,0 +1,38 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.unselected-radio
+{
+    align-items: center;
+    background-color: #c0a6a9;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 25px !important;
+    justify-content: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 25px !important;
+    &:hover
+    {
+        background-color: rgba(#c0a6a9, .25);
+    }
+}
+
+.selected-radio
+{
+    align-items: center;
+    background-color: #119822;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 25px !important;
+    justify-content: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 25px !important;
+}

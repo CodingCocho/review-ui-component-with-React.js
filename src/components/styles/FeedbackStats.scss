@@ -1,0 +1,22 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.feedback-stats-container
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 275px;
+    p
+    {
+        color: #FFEAEC;
+        font-size: .85rem;
+    }
+}

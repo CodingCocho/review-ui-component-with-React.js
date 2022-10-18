@@ -5,6 +5,11 @@
 }
 
 .App {
+  background-color: #BAC1B8;
   min-height: 100vh;
   min-width: 100vw;
+}
+.App .feedback-column {
+  margin-top: 20px;
+  width: 100vw;
 }/*# sourceMappingURL=App.css.map */
