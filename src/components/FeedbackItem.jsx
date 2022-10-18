@@ -6,7 +6,7 @@ import './styles/FeedbackItem.css';
 export const FeedbackItem = (props) =>
 {
 
-    // Deconstruct review data
+    // Deconstruct props
     const {deleteHandler, id, rating, review} = props;
 
     // Set states for the rating and text since it will be immutable

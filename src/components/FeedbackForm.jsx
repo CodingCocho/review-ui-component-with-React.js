@@ -6,73 +6,142 @@ import './styles/FeedbackForm.css';
 export const FeedbackForm = (props) =>
 {
 
+    // Deconstruct props
     const {addHandler} = props;
 
+    // Set our useStates for the form
     const [disabledMessage, setDisabledMessage] = useState('');
     const [isDisabled, setDisable] = useState(true);
     const [userRating, setUserRating] = useState(10)
     const [reviewText, setReviewText] = useState('');
     
-    
+    // Component Functions
+
+    /* 
+    Updates the reviewText useState and shows message
+    depending if reviewText is valid to submit
+    @param e to target element's value
+    @return none 
+  */
     const inputHandler = (e) => 
     {
+        
+        // Check for empty input element 
         if(reviewText === ' ')
         {
+
+            // Disable button
             setDisable(true);
+            
+            // Display no message
             setDisabledMessage(null);
         }
+
+        // Check if user has typed and reviewText is appropriate length
         else if(reviewText !== ' ' && reviewText.trim().length < 9)
         {
+            
+            // Disable button
             setDisable(true);
-            setDisabledMessage('Review must be 10 characters');
+
+            // Display disabledMessage
+            setDisabledMessage('Review must be at least 10 characters');
         }
+
+        // Else the reviewText is appropriate
         else
         {
+
+            // Allow submission of form
             setDisable(false)
+
+            // Display no message
             setDisabledMessage(null);
         }
+
+        // Update reviewText useState
         setReviewText(e.target.value);
     }
 
+    /* 
+    Updates the userRating useState and applies class
+    styles accordingly
+    @param selectedRating rating that was selected by the user
+    @return none 
+  */
     const ratingHandler = (selectedRating) =>
     {
+
+        // Hold all RatingRadio components
         const ratingRadios = document.getElementById('ratings').children;
+
+        // Remove the past selected radio
         ratingRadios[userRating-1].classList.remove('selected-radio')
+
+        // Add the unselected-radio class
         ratingRadios[userRating-1].classList.add('unselected-radio');
+
+        // Add the selected-radio class to the selected RatingRadio
         ratingRadios[selectedRating-1].classList.add('selected-radio')
+
+        // Update the userRating useState
         setUserRating(selectedRating);
     }
 
+    /* 
+    Updates the App by adding the newFeedback object into
+    our existing data state in App.jsx
+    @param e event to prevent form submission
+    @return none 
+  */
     const submitHandler = (e) =>
     {
+
+        // Prevents page refresh
         e.preventDefault();
+
+        // Check if reviewText is appropriate to submit
         if(reviewText.trim().length > 9)
         {
+
+            // Hold a new feedback object
             const newFeedback = 
             {
                 id: uuidv4(),
                 rating: userRating,
                 text: reviewText
             }
+
+            // Use prop handler function to add newFeedback
             addHandler(newFeedback)
+
+            // Update userRating to default RatingRadio
+            setUserRating(10);
+
+            // Update reviewText useState to empty string
+            setReviewText('')
         }
     }
 
     return (
         <>
+            {/* Hold the container that wraps the form */}
             <div 
             className="form-container"
             >
+                {/* Establish the form element */}
                 <form
                 onSubmit={submitHandler}
                 >
                     
+                    {/* Instructions for the user */}
                     <p
                     className="form-instructions"
                     >
                         How would you rate your service with us?
                     </p>
                     
+                    {/* Hold all the RatingRadio components */}
                     <div 
                     className="ratings-container"
                     id="ratings"
@@ -139,6 +208,7 @@ export const FeedbackForm = (props) =>
                         />   
                     </div>
                     
+                    {/* Container to wrap the input field */}
                     <div 
                     className="input-container"
                     >

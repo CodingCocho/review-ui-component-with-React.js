@@ -12,4 +12,13 @@
 .App .feedback-column {
   margin-top: 20px;
   width: 100vw;
+}
+
+.question-link {
+  bottom: 20px;
+  color: #FFEAEC;
+  cursor: pointer;
+  font-size: 1.75rem;
+  position: absolute;
+  right: 20px;
 }/*# sourceMappingURL=App.css.map */
