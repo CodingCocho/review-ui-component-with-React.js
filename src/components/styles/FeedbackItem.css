@@ -18,7 +18,7 @@
 .feedback-container .close-icon {
   cursor: pointer;
   position: relative;
-  right: -225px;
+  right: -220px;
   top: -30px;
 }
 .feedback-container .rating-container {
@@ -38,5 +38,5 @@
 .feedback-container .rating-text {
   font-size: 0.75rem;
   position: relative;
-  top: -25px;
+  top: -20px;
 }/*# sourceMappingURL=FeedbackItem.css.map */

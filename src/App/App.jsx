@@ -23,6 +23,16 @@ function App() {
   // Prop functions
 
   /* 
+    Adds a new FeedbackItem component to the list
+    @param newFeedbackComponent feedback object to add to existing data
+    @return none 
+  */
+    const addFeedbackItemComponent = (newFeedbackComponent) =>
+    {
+        setData([newFeedbackComponent, ...data]) 
+    }
+    
+  /* 
     Deletes the FeedbackItem component from the list
     @param id the index of the object in the array
     @return none 
@@ -33,17 +43,7 @@ function App() {
       {
           setData(data.filter(review => review.id !== id));
       }
-  }
-
-  /* 
-    Adds a new FeedbackItem component to the list
-    @param newFeedbackComponent feedback object to add to existing data
-    @return none 
-  */
-  const addFeedbackItemComponent = (newFeedbackComponent) =>
-  {
-      setData([newFeedbackComponent, ...data])
-  }
+  }  
 
   // Return our main app structure
   return (
@@ -106,8 +106,7 @@ function App() {
                             deleteHandler={deleteFeedbackItemComponent}
                             id={review.id}
                             key={review.id} 
-                            rating={review.rating}
-                            review={review.text}
+                            review={review}
                             />
                           </motion.div>
                         )

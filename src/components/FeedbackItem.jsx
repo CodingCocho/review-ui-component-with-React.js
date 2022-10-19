@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {FaTimes} from 'react-icons/fa';
+import {FaEdit, FaTimes} from 'react-icons/fa';
 import './styles/FeedbackItem.css';
 
 // FeedbackItem serves as the container which will hold the data of each review
@@ -7,14 +7,14 @@ export const FeedbackItem = (props) =>
 {
 
     // Deconstruct props
-    const {deleteHandler, id, rating, review} = props;
+    const {deleteHandler, id, review} = props;
 
     // Set states for the rating and text since it will be immutable
-    const [componentRating, setComponentRating] = useState(rating);
-    const [componentText, setComponentText] = useState(review);
+    const [componentRating, setComponentRating] = useState(review.rating);
+    const [componentText, setComponentText] = useState(review.text);
 
     // Conditional rendering check in case of empty props
-    if(!rating && !review)
+    if(!review)
     {
         return(
             <>
@@ -41,7 +41,7 @@ export const FeedbackItem = (props) =>
                 {/* Hold the icon to delete */}
                 <FaTimes
                 className="close-icon"
-                color="purple"
+                color="#119822"
                 onClick={() => deleteHandler(id)}
                 >
                 </FaTimes>

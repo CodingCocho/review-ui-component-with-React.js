@@ -215,6 +215,7 @@ export const FeedbackForm = (props) =>
                         
                         {/* Hold our input element to keep track of review message*/}
                         <input 
+                        id="feedback-input"
                         onChange={inputHandler}
                         placeholder="Write a review"
                         type="text" 
@@ -223,7 +224,8 @@ export const FeedbackForm = (props) =>
 
                         {/* Hold our button that will submit the form to add a new review */}
                         <button
-                        disabled={isDisabled} 
+                        disabled={isDisabled}
+                        id="form-button" 
                         type="submit"
                         >
                             Send
